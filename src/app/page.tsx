@@ -1,17 +1,23 @@
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import CarouselCustom from "./components/CarouselCustom";
 import Content from "./home";
-import './globals.css'
 
+import { mockData } from '@/mock/mockData';
+import './globals.css';
 
 export default function Home() {
+  if (!mockData?.carousel || !Array.isArray(mockData.carousel)) {
+    return <div>Error: Carousel data not available</div>;
+  }
+
   return (
-    <div className="">
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <CarouselCustom />
-      <Content />
-      <Footer/>
+      
+      <main className="flex-grow">
+        <Content />
+      </main>
+      <Footer />
     </div>
   );
 }
