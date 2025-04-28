@@ -171,7 +171,7 @@ const Header = () => {
               <MobileFilled /> {'\u00A0'}
 
               {/* nhớ đổi link */}
-              <Popover content={<QRCode value="https://ant.design" bordered={false} icon='/images/longchau-qr.png' size={100} />}>
+              <Popover content={<QRCode value="https://ant.design" bordered={false} icon='/images/qr.png' size={100} />}>
                 Tải ứng dụng
               </Popover>
             </span>
@@ -214,7 +214,7 @@ const Header = () => {
 
           {/* Desktop layout */}
           <div className='hidden md:flex align-bottom'>
-            <div className='flex basis-[20%] m-4'>
+            <div className='flex basis-[20%] mt-3'>
               <Link href='/'>
                 <Image
                   src='/images/logo.png'
