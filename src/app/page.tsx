@@ -1,9 +1,9 @@
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Content from "./home";
+import Header from ".././shared/components/Header";
+import Footer from ".././shared/components/Footer";
+import Content from "../app/home/page";
 
 import { mockData } from '@/mock/mockData';
-import './globals.css';
+import "../styles/globals.css";
 
 export default function Home() {
   if (!mockData?.carousel || !Array.isArray(mockData.carousel)) {
@@ -13,7 +13,6 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      
       <main className="flex-grow">
         <Content />
       </main>

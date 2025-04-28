@@ -110,7 +110,7 @@ const Footer: React.FC = () => {
     };
 
     return (
-        <footer className="w-full bg-white text-sm">
+        <footer className="w-full bg-white text-sm mt-3">
             <div className="bg-[#2166de] text-white w-full py-6">
                 <div className="container mx-auto px-4">
                     <div className="flex flex-col md:flex-row items-center md:justify-between gap-4">
