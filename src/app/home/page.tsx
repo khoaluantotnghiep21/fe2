@@ -1,14 +1,19 @@
 'use client';
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import Image from 'next/image';
 import { mockData } from '@/mock/mockData';
 import CarouselCustom from '../../shared/components/Carousel';
 import CardItem from '../../shared/components/CardItem';
+import {TestService} from "@/apis/test/testService";
 
 const Content: React.FC = () => {
     // State for managing the selected option in CardItem
     const [selectedOption, setSelectedOption] = useState<string>('Hộp');
 
+    useEffect(() => {
+        let resp = new TestService().getTest();
+        alert(process.env.VITE_API_BASE_URL)
+    }, []);
     // Validate carousel data
     if (!mockData?.carousel || !Array.isArray(mockData.carousel)) {
         return <div>Error: Carousel data not available</div>;
