@@ -41,7 +41,7 @@ export const mockData = {
     }, 
     {
       desktopSrc: "/images/slider2.png",
-      mobileSrc: "/images/slider22-mobile.png",
+      mobileSrc: "/images/slider2-mobile.png",
       alt: "slide",
       desktopWidth: 1920,
       desktopHeight: 600,
